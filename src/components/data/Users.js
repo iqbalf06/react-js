@@ -9,5 +9,5 @@ const users = [
     email: "user@mail.com",
     password: "123",
   },
-]
-export default users
+];
+export default users;

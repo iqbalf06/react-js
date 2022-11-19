@@ -1,13 +1,13 @@
 import React from "react";
-import { Button, Card, Row, Col, Stack } from "react-bootstrap";
+import { Card, Col, Row, Stack } from "react-bootstrap";
+import Group from "../components/images/Group.png";
 import PhotoProfile from "../components/images/photoProfile.png";
 import ProductTransaction from "../components/images/productTransaction.png";
-import Group from "../components/images/Group.png";
 import Qrcode from "../components/images/qr-code.png";
 
 function Profile() {
   return (
-    <div style={{marginTop:"8%"}}>
+    <div style={{ marginTop: "8%" }}>
       <Row>
         <Card
           border="white"
@@ -131,7 +131,7 @@ function Profile() {
                           </strong>
                           Bill Berry Boba, Manggo
                         </p>
-                        <p style={{ fontSize: "10px" }}>Price : Rp.33.000</p>
+                        <p style={{ fontSize: "10px" }}>Price : Rp.36.000</p>
                       </Col>
                       <img
                         src={Qrcode}

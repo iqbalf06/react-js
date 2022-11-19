@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import Brandlogo from "./Brandlogo.png";
+import { Nav, OverlayTrigger, Popover } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import Button from "react-bootstrap/Button";
 import Stack from "react-bootstrap/Stack";
-import Login from "./Login";
-import Register from "./Register";
-import { useNavigate } from "react-router-dom";
-import { Popover, OverlayTrigger, Nav, Link } from "react-bootstrap";
+import logout from "../components/images/logout.png";
 import Profile from "../components/images/profile.png";
 import User from "../components/images/user.png";
-import logout from "../components/images/logout.png";
+import Brandlogo from "./Brandlogo.png";
+import Login from "./Login";
+import Register from "./Register";
 
 function Navs() {
   const [showLogin, setShowLogin] = useState(false);
@@ -20,7 +19,7 @@ function Navs() {
 
   const Logout = () => {
     localStorage.removeItem("VALUE_LOGIN");
-    window.location.reload()
+    window.location.reload();
   };
 
   return (
@@ -53,7 +52,7 @@ function Navs() {
                   setShowLogin={setShowLogin}
                   setShowRegister={setShowRegister}
                 />
-                <Button variant="danger" onClick={() => setShowRegister(true)}>
+                <Button variant="danger" style={{backgroundColor:"#BD0707"}} onClick={() => setShowRegister(true)}>
                   Register
                 </Button>
                 <Register
@@ -71,8 +70,8 @@ function Navs() {
                   trigger="click"
                   placement="bottom"
                   overlay={
-                    <Popover id="popover-basic" style={{height:"130px"}}>
-                      <Popover.Body >
+                    <Popover id="popover-basic" style={{ height: "130px" }}>
+                      <Popover.Body>
                         <Nav.Link href="/Profile" style={{ height: "2px" }}>
                           <img
                             src={User}
@@ -97,18 +96,17 @@ function Navs() {
                               marginRight: "3px",
                               marginLeft: "3px",
                             }}
-                            
                           />
-                            Logout
+                          Logout
                         </Nav.Link>
                       </Popover.Body>
                     </Popover>
                   }
                 >
                   <img
-                    style={{ width: "55px", height: "55px" }}
+                    style={{ width: "55px", height: "55px", cursor: "pointer" }}
                     src={Profile}
-                    alt="logo"
+                    alt="userPhoto"
                   />
                 </OverlayTrigger>
               </>

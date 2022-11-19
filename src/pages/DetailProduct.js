@@ -1,5 +1,6 @@
 import React from "react";
-import ProductImage from "../components/images/detailproduct1.png";
+import { Button, Card, Col, Row, Badge } from "react-bootstrap";
+import { useNavigate, useParams } from "react-router-dom";
 import Toping1 from "../components/images/Toping1.png";
 import Toping2 from "../components/images/Toping2.png";
 import Toping3 from "../components/images/Toping3.png";
@@ -8,15 +9,14 @@ import Toping5 from "../components/images/Toping5.png";
 import Toping6 from "../components/images/Toping6.png";
 import Toping7 from "../components/images/Toping7.png";
 import Toping8 from "../components/images/Toping8.png";
-import { Card, Button, Stack, Row, Col } from "react-bootstrap";
-import { useParams, useNavigate } from "react-router-dom";
+import Checklist from "../components/images/checklist.png"
 import { products } from "../components/ListProduct";
 
 function DetailProduct() {
   const { id } = useParams();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
-    <div style={{marginTop:"8%"}}>
+    <div style={{ marginTop: "8%" }}>
       <Card
         className="my-5"
         border="white"
@@ -25,7 +25,7 @@ function DetailProduct() {
         <Row>
           <Card.Img
             style={{ width: "400px", height: "509px" }}
-            src={products[id].order}
+            src={products[id].imgproduct}
           />
           <Col>
             <Card.Body>
@@ -66,7 +66,13 @@ function DetailProduct() {
                       height: "65px",
                       paddingLeft: "20%",
                     }}
-                  ></img>
+                  >
+                  </img>
+                  <Badge
+                  className="bg-success border border-light rounded-circle translate-middle p-0"
+                    style={{paddingBottom:"50%", width:"20px", height:"20px"}}>
+                      <img style={{width:"20px", paddingBottom:"50%"}} src={Checklist}></img>
+                    </Badge>
                   <p style={{ fontSize: "14px" }}>Bubble Tea Gelatin</p>
                 </Col>
                 <Col>
@@ -78,6 +84,11 @@ function DetailProduct() {
                       paddingLeft: "20%",
                     }}
                   ></img>
+                  <Badge
+                  className="bg-success border border-light rounded-circle translate-middle p-0"
+                    style={{paddingBottom:"50%", width:"20px", height:"20px"}}>
+                      <img style={{width:"20px", paddingBottom:"50%"}} src={Checklist}></img>
+                    </Badge>
                   <p style={{ fontSize: "14px", paddingLeft: "31px" }}>
                     Manggo
                   </p>
@@ -91,6 +102,11 @@ function DetailProduct() {
                       paddingLeft: "20%",
                     }}
                   ></img>
+                  <Badge
+                  className="bg-success border border-light rounded-circle translate-middle p-0"
+                    style={{paddingBottom:"50%", width:"20px", height:"20px"}}>
+                      <img style={{width:"20px", paddingBottom:"50%"}} src={Checklist}></img>
+                    </Badge>
                   <p style={{ fontSize: "14px", paddingLeft: "14px" }}>
                     Green Coconut
                   </p>
@@ -104,6 +120,11 @@ function DetailProduct() {
                       paddingLeft: "20%",
                     }}
                   ></img>
+                  <Badge
+                  className="bg-success border border-light rounded-circle translate-middle p-0"
+                    style={{paddingBottom:"50%", width:"20px", height:"20px"}}>
+                      <img style={{width:"20px", paddingBottom:"50%"}} src={Checklist}></img>
+                    </Badge>
                   <p style={{ fontSize: "14px", paddingLeft: "18px" }}>
                     Boba Manggo
                   </p>
@@ -119,6 +140,11 @@ function DetailProduct() {
                       paddingLeft: "20%",
                     }}
                   ></img>
+                  <Badge
+                  className="bg-success border border-light rounded-circle translate-middle p-0"
+                    style={{paddingBottom:"50%", width:"20px", height:"20px"}}>
+                      <img style={{width:"20px", paddingBottom:"50%"}} src={Checklist}></img>
+                    </Badge>
                   <p style={{ fontSize: "14px" }}>Bill Berry Boba</p>
                 </Col>
                 <Col>
@@ -130,6 +156,11 @@ function DetailProduct() {
                       paddingLeft: "19%",
                     }}
                   ></img>
+                  <Badge
+                  className="bg-success border border-light rounded-circle translate-middle p-0"
+                    style={{paddingBottom:"50%", width:"20px", height:"20px"}}>
+                      <img style={{width:"20px", paddingBottom:"50%"}} src={Checklist}></img>
+                    </Badge>
                   <p style={{ fontSize: "14px" }}>Kiwi Popping Pearl</p>
                 </Col>
                 <Col>
@@ -141,6 +172,11 @@ function DetailProduct() {
                       paddingLeft: "20%",
                     }}
                   ></img>
+                  <Badge
+                  className="bg-success border border-light rounded-circle translate-middle p-0"
+                    style={{paddingBottom:"50%", width:"20px", height:"20px"}}>
+                      <img style={{width:"20px", paddingBottom:"50%"}} src={Checklist}></img>
+                    </Badge>
                   <p style={{ fontSize: "14px" }}>Matcha Cantaloupe</p>
                 </Col>
                 <Col>
@@ -152,6 +188,11 @@ function DetailProduct() {
                       paddingLeft: "20%",
                     }}
                   ></img>
+                  <Badge
+                  className="bg-success border border-light rounded-circle translate-middle p-0"
+                    style={{paddingBottom:"50%", width:"20px", height:"20px"}}>
+                      <img style={{width:"20px", paddingBottom:"50%"}} src={Checklist}></img>
+                    </Badge>
                   <p style={{ fontSize: "14px" }}>Strawberry Popping</p>
                 </Col>
                 <Row>
@@ -187,7 +228,7 @@ function DetailProduct() {
               <div className="d-grid gap-2">
                 <Button
                   className="text-white"
-                  variant="primary"
+                  variant="danger"
                   size="lg"
                   style={{ backgroundColor: "#BD0707" }}
                   onClick={() => {

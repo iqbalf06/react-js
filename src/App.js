@@ -10,7 +10,7 @@ import Profile from "./pages/Profile";
 import Cart from "./pages/Cart";
 import NavUser from "./components/NavUser";
 import NavAdmin from "./components/NavAdmin";
-import Product from "./components/Product"
+import Product from "./components/Product";
 import Transaction from "./components/admin/Transaction";
 import AddProduct from "./components/admin/AddProduct";
 import Addtop from "./components/admin/AddToping";
@@ -30,11 +30,10 @@ function App() {
       {/* <Addtop /> */}
       {/* <TransactionAdmin /> */}
       {/* <Product /> */}
-        {/* <Navs /> */}
-
+      {/* <Navs /> */}
 
       <Router>
-      <Navs />
+        <Navs />
         {/* <NavUser /> */}
         {/* <NavAdmin /> */}
         <Routes>
@@ -44,8 +43,6 @@ function App() {
           <Route path="/product/:name/:id" element={<DetailProduct />} />
           <Route path="/addproduct" element={<AddProduct />} />
           <Route path="/addtoping" element={<Addtop />} />
-
-
         </Routes>
       </Router>
     </>

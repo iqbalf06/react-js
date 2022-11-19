@@ -1,16 +1,10 @@
 import React from "react";
 import hero from "../components/images/Frame 1.png";
-import product1 from "../components/images/product1.png";
-import product2 from "../components/images/product2.png";
-import product3 from "../components/images/product3.png";
-import product4 from "../components/images/product4.png";
-import { Card, Button, Stack } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
-import Product from '../components/Product'
+import Product from "../components/Product";
 
 const Home = () => {
   return (
-    <div style={{marginTop:"100px"}}>
+    <div style={{ marginTop: "100px" }}>
       <div className="px-5 pt-5 position-relative">
         <img className="img-fluid" src={hero} />
         <div
@@ -28,13 +22,20 @@ const Home = () => {
           </p>
           <p
             className="text-white"
-            style={{ fontSize: "18px", width: 500, paddingTop: "3%" }}
+            style={{
+              fontSize: "18px",
+              width: 500,
+              paddingTop: "3%",
+              marginBottom: "1px",
+            }}
           >
-            
             We have temporarily closed our in-store cafes, but select grocery
-            and drive-thru locations remaining open. <strong>Waysbucks</strong> Drivers is also
-            available
+            and drive-thru locations remaining open.
           </p>
+          <p className="text-white" style={{ fontSize: "18px", width: 500 }}>
+            <strong>Waysbucks</strong> Drivers is also available
+          </p>
+
           <p
             className="text-white"
             style={{ fontSize: "24px", marginTop: "10%" }}
@@ -59,46 +60,46 @@ const Home = () => {
   );
 };
 
-        // <Card
-        //   className=""
-        //   style={{
-        //     width: "20rem",
-        //     borderRadius: "14px",
-        //     backgroundColor: "#F3CFC6",
-        //   }}
-        // >
-        //   <Card.Img src={product2} />
-        //   <Card.Body>
-        //     <Card.Title>Ice Coffee Green Tea</Card.Title>
-        //     <Card.Text>Rp. 31.000</Card.Text>
-        //   </Card.Body>
-        // </Card>
-        // <Card
-        //   className=""
-        //   style={{
-        //     width: "20rem",
-        //     borderRadius: "14px",
-        //     backgroundColor: "#F3CFC6",
-        //   }}
-        // >
-        //   <Card.Img src={product3} />
-        //   <Card.Body>
-        //     <Card.Title>Hanami Latte</Card.Title>
-        //     <Card.Text>Rp. 29.000</Card.Text>
-        //   </Card.Body>
-        // </Card>
-        // <Card
-        //   className=""
-        //   style={{
-        //     width: "20rem",
-        //     borderRadius: "14px",
-        //     backgroundColor: "#F3CFC6",
-        //   }}
-        // >
-        //   <Card.Img src={product4} />
-        //   <Card.Body>
-        //     <Card.Title>Clepon Coffee</Card.Title>
-        //     <Card.Text>Rp. 28.000</Card.Text>
-        //   </Card.Body>
-        // </Card>
+// <Card
+//   className=""
+//   style={{
+//     width: "20rem",
+//     borderRadius: "14px",
+//     backgroundColor: "#F3CFC6",
+//   }}
+// >
+//   <Card.Img src={product2} />
+//   <Card.Body>
+//     <Card.Title>Ice Coffee Green Tea</Card.Title>
+//     <Card.Text>Rp. 31.000</Card.Text>
+//   </Card.Body>
+// </Card>
+// <Card
+//   className=""
+//   style={{
+//     width: "20rem",
+//     borderRadius: "14px",
+//     backgroundColor: "#F3CFC6",
+//   }}
+// >
+//   <Card.Img src={product3} />
+//   <Card.Body>
+//     <Card.Title>Hanami Latte</Card.Title>
+//     <Card.Text>Rp. 29.000</Card.Text>
+//   </Card.Body>
+// </Card>
+// <Card
+//   className=""
+//   style={{
+//     width: "20rem",
+//     borderRadius: "14px",
+//     backgroundColor: "#F3CFC6",
+//   }}
+// >
+//   <Card.Img src={product4} />
+//   <Card.Body>
+//     <Card.Title>Clepon Coffee</Card.Title>
+//     <Card.Text>Rp. 28.000</Card.Text>
+//   </Card.Body>
+// </Card>
 export default Home;

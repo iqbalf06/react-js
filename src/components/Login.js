@@ -1,15 +1,15 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import { Button, Modal, Form, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default function Login({ show, onHide, setShowRegister, setShowLogin }) {
-  const users=[]
+  const users = [];
   const [dataLogin, setUser] = useState({
     email: "",
     password: "",
   });
 
-  let LoginDataUser = JSON.parse(localStorage.getItem("DATA_USER"))
+  let LoginDataUser = JSON.parse(localStorage.getItem("DATA_USER"));
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
@@ -18,14 +18,13 @@ export default function Login({ show, onHide, setShowRegister, setShowLogin }) {
         dataLogin.email === element.email &&
         dataLogin.password === element.password
       ) {
-        users.push(dataLogin)
-        localStorage.setItem("VALUE_LOGIN", JSON.stringify(users))
-        setShowLogin(false)
+        users.push(dataLogin);
+        localStorage.setItem("VALUE_LOGIN", JSON.stringify(users));
+        setShowLogin(false);
       } else {
         console.log(LoginDataUser);
       }
-    })
-
+    });
   };
   return (
     <Modal
@@ -49,7 +48,7 @@ export default function Login({ show, onHide, setShowRegister, setShowLogin }) {
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label></Form.Label>
             <Form.Control
-            onChange={(e) => setUser({ ...dataLogin, email: e.target.value })}
+              onChange={(e) => setUser({ ...dataLogin, email: e.target.value })}
               className="form-control bg-danger bg-opacity-10"
               style={{
                 height: "50px",
@@ -67,7 +66,9 @@ export default function Login({ show, onHide, setShowRegister, setShowLogin }) {
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label></Form.Label>
             <Form.Control
-            onChange={(e) => setUser({ ...dataLogin, password: e.target.value })}
+              onChange={(e) =>
+                setUser({ ...dataLogin, password: e.target.value })
+              }
               className="form-control bg-danger bg-opacity-10"
               style={{
                 height: "50px",
@@ -83,7 +84,7 @@ export default function Login({ show, onHide, setShowRegister, setShowLogin }) {
           <div className="d-grid gap-2">
             <Button
               className="text-white"
-              variant="primary"
+              variant="danger"
               size="lg"
               style={{ backgroundColor: "#BD0707" }}
               type="submit"

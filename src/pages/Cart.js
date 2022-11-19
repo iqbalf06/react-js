@@ -1,9 +1,9 @@
 import React from "react";
-import { Container, Stack, Button, Row, Col, Form } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import Attach from "../components/images/attachinvoice.png";
 import CartProduct from "../components/images/cartProduct.png";
 import Cup from "../components/images/cupcart.png";
-import Attach from "../components/images/attachinvoice.png";
 
 function Cart() {
   const navigate = useNavigate();
@@ -391,12 +391,12 @@ function Cart() {
             <div className="d-grid" style={{}}>
               <Button
                 className="text-white"
-                variant="primary"
+                variant="danger"
                 size="md"
                 style={{ backgroundColor: "#BD0707", marginTop: "20px" }}
                 onClick={() => {
-                    navigate(`/`);
-                  }}
+                  navigate(`/`);
+                }}
               >
                 Pay
               </Button>

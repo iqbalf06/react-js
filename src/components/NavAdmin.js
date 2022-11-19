@@ -1,10 +1,7 @@
-import React from 'react'
+import React from 'react';
+import { Container, Nav, Navbar } from "react-bootstrap";
+import DropdownAdmin from "./admin/DropdownAdmin";
 import Brandlogo from "./Brandlogo.png";
-import { Container, Nav, NavLink, Navbar, Buttton, Stack, OverlayTrigger, Popover, NavbarBrand } from "react-bootstrap";
-import Login from "./Login"
-import Register from "./Register"
-import Profile from "../components/images/profile.png"
-import DropdownAdmin from "./admin/DropdownAdmin"
 
 function NavAdmin() {
   return (
